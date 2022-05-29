@@ -1,0 +1,332 @@
+:root {
+  --background: #f4ede5;
+  --text: #8d7e7e; /* #7e838d; */
+  --hl_text: rgb(20, 160, 185);
+  --foreground: black;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --foresep: #f1f1f1;
+
+  --font: "Nunito Sans", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #f6f5f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  height: 95vh;
+  margin: -20px 0 50px;
+}
+
+.container {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  position: relative;
+  overflow: hidden;
+  width: 67%;
+  max-width: auto;
+
+  overflow: auto;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  border-bottom: 50px;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100vw;
+  height: 70px;
+  background: var(--foreground);
+  /* border-radius: 0 0 5px 5px; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0 0 8px var(--shadow);
+  z-index: 4;
+}
+
+header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 986px;
+}
+
+nav .l_nav {
+  padding-right: 20px;
+}
+
+nav .r_nav {
+  text-align: right;
+  padding: 10px 0;
+  padding-right: 20px;
+}
+
+nav .r_nav a {
+  background: var(--hl_text);
+  font-weight: 700;
+  color: var(--foreground);
+  border-radius: 7px;
+  line-height: 50px;
+  padding: 9px 15px;
+  transition: background 0.2s ease;
+}
+
+nav .r_nav a:hover {
+  background: var(--text);
+  color: var(--foreground);
+}
+
+nav h1 {
+  padding: 0 20px;
+  line-height: 70px;
+  margin: 0;
+  display: inline-block;
+  color: var(--hl_text);
+  font-size: 23px;
+  font-weight: 900;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text);
+  line-height: 30px;
+  padding: 0 10px;
+}
+
+nav a.here {
+  color: var(--hl_text);
+  font-weight: 700;
+}
+
+nav a:hover {
+  color: var(--hl_text);
+}
+
+#s_nav {
+  display: none;
+  height: 70px;
+  width: 70px;
+  background: var(--sidenav) center center no-repeat;
+  background-size: 24px 24px;
+}
+
+button {
+  border-radius: 20px;
+  border: 1px solid #2bffff;
+  background: #6bf7e7;
+  background: -webkit-linear-gradient(to right, #2bffff, #32eef1);
+  background: linear-gradient(to right, #2bffff, #2bffff);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button:focus {
+  outline: none;
+}
+
+button.ghost {
+  background-color: transparent;
+  border-color: #ffffff;
+}
+
+footer {
+  background-color: rgb(20, 160, 185);
+  color: #fff;
+  font-size: 14px;
+  bottom: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 999;
+}
+
+footer p {
+  margin: 10px 0;
+}
+
+.immagine_base {
+  display: flex;
+
+  align-items: center;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  height: 65%;
+  width: 65%;
+}
+
+.hidden {
+  display: none;
+}
+
+.img_post {
+  border-radius: 10px;
+  width: 500px;
+  height: 450px;
+}
+
+.box_post {
+  display: flex;
+  flex-direction: column;
+  margin-left: 267px;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+button.btnlike {
+  width: 250px;
+}
+button.btn_non_like {
+  width: 250px;
+  border-radius: 20px;
+  border: 1px solid #021063;
+  background: #ff416c;
+  background: -webkit-linear-gradient(to right, #4a3c99, #021e6b);
+  background: linear-gradient(to right, #2b80ff, #0a0368);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+}
+button.btnTuttilike {
+  width: 250px;
+}
+div.contain {
+  height: 50px;
+  display: flex;
+  flex-direction: initial;
+  margin-top: 5px;
+}
+
+p {
+  margin-top: 50px;
+  margin-left: 260px;
+}
+
+div.cont_profil {
+  display: flex;
+  flex-direction: initial;
+  width: auto;
+  height: auto;
+  margin-bottom: 15px;
+}
+.titolo_post {
+  margin-top: 10px;
+  margin-right: 40px;
+  font-family: "Roboto Slab", serif;
+  font-size: 24px;
+  color: rgb(0, 0, 0);
+  max-width: 450px;
+  display: flex;
+}
+.data_pubblic {
+  margin-left: auto;
+  font-size: 14px;
+  color: #b2b2b2;
+  flex-shrink: 0;
+  padding-left: 10px;
+  padding-top: 1px;
+}
+img.immaginetta_profilo {
+  background-size: cover;
+  background-position: center;
+  border-radius: 100%;
+  width: 85px;
+  height: 85px;
+  margin-top: -50px;
+  border: 1px solid white;
+}
+
+text.username {
+  font-family: "Roboto Slab", serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(51, 51, 51);
+  margin-top: -20px;
+  margin-left: 10px;
+}
+
+.iframe_video {
+  width: 500px;
+  height: 450px;
+}
+
+.modale_tuttilike {
+  position: fixed; /* Stay in place */
+  padding-top: 100px; /* Location of the box */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.6); /* Black w/ opacity */
+}
+
+div.cont {
+  display: flex;
+  flex-direction: column;
+  width: 550px;
+  position: fixed;
+  left: 500px;
+  height: 530px;
+  background-color: whitesmoke;
+  overflow: auto;
+}
+
+.cont_profili {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.img_profilo {
+  background-position: center;
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+}
+
+.username_like {
+  font-family: "Roboto Slab", serif;
+  font-size: 24px;
+  color: rgb(0, 0, 0);
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+button.Esc_modal {
+  margin-top: 167px;
+  border-radius: 20px;
+  border: 1px solid #2bffff;
+  background: #6bf7e7;
+  background: -webkit-linear-gradient(to right, #2bffff, #32eef1);
+  background: linear-gradient(to right, #2bffff, #2bffff);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+}
